@@ -4,6 +4,7 @@ public class PackAnimal : IAnimal
 {
     public int Age { get; set; }
     public string Name { get; set; }
+    public string Breed { get; set; }
     private int AnimalId { get; set; }
 
     
@@ -26,16 +27,31 @@ public class PackAnimal : IAnimal
     {
         return _commands.Keys.ToList();
     }
-    
-    public void SaveAnimalToDatabase(Database db)
+
+    public void AddAnimal(Database db, DateTime birthDate = default)
     {
-        string query = $"INSERT INTO DomesticAnimals (Name, Age) VALUES ('{Name}', {Age}); SELECT LAST_INSERT_ID();";
+        db.OpenConnection();
+
+        string query = $"INSERT INTO Animals (Name, Age, BirthDate, Type) VALUES ('{Name}', {Age}, '{birthDate:yyyy-MM-dd}', 'Pack'); SELECT LAST_INSERT_ID();";
         AnimalId = db.ExecuteScalar(query);
+
+        if (AnimalId > 0)
+        {
+            query = $"INSERT INTO PackAnimals (AnimalID, Breed) VALUES ({AnimalId}, '{Breed}')";
+            db.ExecuteNonQuery(query);
+        }
+
+        db.CloseConnection();
     }
-    
+
     public void SaveCommandToDatabase(Database db, string commandName, string commandValue)
     {
-        string query = $"INSERT INTO Commands (AnimalID, AnimalType, CommandName, CommandValue) VALUES ({AnimalId}, 'Pack', '{commandName}', '{commandValue}')";
+        string query = $"INSERT INTO Commands (PackAnimalID, AnimalType, CommandName, CommandValue) VALUES ({AnimalId}, 'Pack', '{commandName}', '{commandValue}')";
         db.ExecuteNonQuery(query);
+    }
+    
+    public int GetAnimalID()
+    {
+        return AnimalId;
     }
 }

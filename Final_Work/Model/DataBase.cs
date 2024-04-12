@@ -7,7 +7,7 @@ public class Database
 {
     private MySqlConnection connection;
     
-    public Database(string connectionString="Server=localhost;Port=3306;Database=human_friends;Uid=root;Pwd=2501;")
+    public Database(string connectionString="Server=localhost;Port=3306;Database=human_friends2;Uid=root;Pwd=2501;")
     {
         connection = new MySqlConnection(connectionString);
     }
