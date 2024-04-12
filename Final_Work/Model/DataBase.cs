@@ -1,4 +1,6 @@
-﻿namespace Final_Work;
+﻿using Dapper;
+
+namespace Final_Work;
 
 using MySql.Data.MySqlClient;
 using System.Data;
@@ -59,4 +61,22 @@ public class Database
             return Convert.ToInt32(result);
         }
     }
+    
+    public string ExecuteScalarString(string query)
+    {
+        using (var command = new MySqlCommand(query, connection))
+        {
+            object result = command.ExecuteScalar();
+            return Convert.ToString(result);
+        }
+    }
+    
+    public List<dynamic> Query(string sql)
+    {
+        OpenConnection();
+        var result = connection.Query(sql).ToList();
+        CloseConnection();
+        return result;
+    }
 }
+

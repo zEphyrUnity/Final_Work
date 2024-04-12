@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Z5Po+znTC/yfsnqzpmZdkJAgL6xagvf/zKLIo60k4iGDwuL1Fr+nmHA4r7O43T6iZ07QODud/vteZArxyqDCrw==",
+  "dgSpecHash": "ohua68WpeuBeL3vZJdf0+sOrVEPozX9yZWr4YI9OgmQvrD8NdLdVSEHveRx7oSonD/XfpF/yBP/w1Kdso8UAtQ==",
   "success": true,
   "projectFilePath": "G:\\GEEK UNIVERSITY\\Digital-master\\C#_Знакомство\\Final\\Final_Work\\Final_Work\\Final_Work.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\zEphyr\\.nuget\\packages\\dapper\\2.1.44\\dapper.2.1.44.nupkg.sha512",
     "C:\\Users\\zEphyr\\.nuget\\packages\\system.configuration.configurationmanager\\9.0.0-preview.2.24128.5\\system.configuration.configurationmanager.9.0.0-preview.2.24128.5.nupkg.sha512",
     "C:\\Users\\zEphyr\\.nuget\\packages\\system.diagnostics.eventlog\\9.0.0-preview.2.24128.5\\system.diagnostics.eventlog.9.0.0-preview.2.24128.5.nupkg.sha512",
     "C:\\Users\\zEphyr\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.0-preview.2.24128.5\\system.security.cryptography.protecteddata.9.0.0-preview.2.24128.5.nupkg.sha512",

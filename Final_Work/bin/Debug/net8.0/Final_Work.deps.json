@@ -8,12 +8,21 @@
     ".NETCoreApp,Version=v8.0": {
       "Final_Work/1.0.0": {
         "dependencies": {
+          "Dapper": "2.1.44",
           "System.Configuration.ConfigurationManager": "9.0.0-preview.2.24128.5",
           "System.Security.Permissions": "9.0.0-preview.2.24128.5",
           "MySql.Data": "8.3.0.0"
         },
         "runtime": {
           "Final_Work.dll": {}
+        }
+      },
+      "Dapper/2.1.44": {
+        "runtime": {
+          "lib/net7.0/Dapper.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.1.44.46364"
+          }
         }
       },
       "System.Configuration.ConfigurationManager/9.0.0-preview.2.24128.5": {
@@ -100,6 +109,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Dapper/2.1.44": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-L6Zdsn0mZY5+UxF2iag/X1an0g+rsPHVswsibunLvHUqby8CyYq5RoVnic1iz/hCtIcqDRTl31Aiu5JXiTyohA==",
+      "path": "dapper/2.1.44",
+      "hashPath": "dapper.2.1.44.nupkg.sha512"
     },
     "System.Configuration.ConfigurationManager/9.0.0-preview.2.24128.5": {
       "type": "package",

@@ -5,7 +5,7 @@ public class PackAnimal : IAnimal
     public int Age { get; set; }
     public string Name { get; set; }
     public string Breed { get; set; }
-    private int AnimalId { get; set; }
+    public int AnimalId { get; set; }
 
     
     private Dictionary<string, ICommand> _commands = new Dictionary<string, ICommand>();
@@ -53,5 +53,10 @@ public class PackAnimal : IAnimal
     public int GetAnimalID()
     {
         return AnimalId;
+    }
+    
+    public override string ToString()
+    {
+        return $"Name: {Name}, Age: {Age}, Breed: {Breed}, AnimalId: {AnimalId}";
     }
 }

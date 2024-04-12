@@ -36,9 +36,8 @@ public class LearnNewCommand
 
     public void TeachCommand(string animalName, Dictionary<string, IAnimal> animals, ConsoleView view, Database db)
     {
-        var controller = new AnimalController(animals[animalName], view);
-        controller.TeachCommand(commandName, commandText);
-        
+        // var controller = new AnimalController(animals[animalName], view);
+        // controller.TeachCommand(commandName, commandText);
         db.OpenConnection();
         animals[animalName].SaveCommandToDatabase(db, commandName, commandText);
         db.CloseConnection();

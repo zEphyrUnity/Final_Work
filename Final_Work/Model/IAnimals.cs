@@ -14,7 +14,5 @@ public interface IAnimal
     void AddAnimal(Database db, DateTime birthDate = default);
     void SaveCommandToDatabase(Database db, string commandName, string commandValue);
     int GetAnimalID();
-
-    
     
 }

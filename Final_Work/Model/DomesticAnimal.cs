@@ -9,7 +9,7 @@ public class DomesticAnimal : IAnimal
     
     public string Breed { get; set; }
     
-    private int AnimalId { get; set; }
+    public int AnimalId { get; set; }
     
 
     private Dictionary<string, ICommand> _commands = new();
@@ -60,5 +60,10 @@ public class DomesticAnimal : IAnimal
     public int GetAnimalID()
     {
         return AnimalId;
+    }
+    
+    public override string ToString()
+    {
+        return $"Name: {Name}, Age: {Age}, Breed: {Breed}, AnimalId: {AnimalId}";
     }
 }
